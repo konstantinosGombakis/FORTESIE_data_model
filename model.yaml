@@ -535,6 +535,14 @@ custom_data_model:
         type: Property
         units: volt-ampere-reactive
 
+    type:
+      description: NGSI Entity type. It has to be fortesie
+      enum:
+        - fortesie
+      type: string
+      x-ngsi:
+        type: Property
+
     windDirection:
       description: Direction of the wind bet
       maximum: 360
