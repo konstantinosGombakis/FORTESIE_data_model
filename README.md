@@ -5,6 +5,7 @@ Version: 0.0.1
 ## Description 
 
 The Data Model for all measurements generated across all pilot in the H2020 FORTESIE project (No 101080029).
+The FORTESIE data models are based on the [SmartDataModels.org](https://smartdatamodels.org)
 
 ### Specification
 
