@@ -1,0 +1,247 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "modelTags": "",
+    "$id": "https://raw.githubusercontent.com/konstantinosGombakis/fortesie_data_model/main/FORTESIES_data_model/schema.json",
+    "$schemaVersion": "0.0.1",
+    "title": "Data model for H2020 FORTESIES project",
+    "description": "Data model for H2020 FORTESIES project",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "phaseVoltage": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. The voltage between each phase and neutral conductor. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Volts'",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 1 of the voltage"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 2 of the voltage"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 3 of the voltage"
+                        }
+                    }
+                },
+                "phaseToPhaseVoltage": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Voltage between phases. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Volts'",
+                    "properties": {
+                        "L12": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 1 to phase 2 voltage"
+                        },
+                        "L23": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 2 to phase 3 voltage"
+                        },
+                        "L31": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 3 to phase 1 voltage"
+                        }
+                    }
+                },
+                "current": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Ampere'",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "description": "Property. Value for phase 1 of the current"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "description": "Property. Value for phase 2 of the current"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "description": "Property. Value for phase 3 of the current"
+                        },
+                        "N": {
+                            "type": "number",
+                            "description": "Property. Value for phase neutral of the current"
+                        }
+                    }
+                },
+                "totalActivePower": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'"
+                },
+
+                "totalReactivePower": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere-reactive'"
+                },
+                "totalApparentPower": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere'"
+                },
+                "powerFactor": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Power factor for each phase",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "minimum": -1,
+                            "maximum": 1,
+                            "description": "Property. Value for phase 1 of the power factor"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "minimum": -1,
+                            "maximum": 1,
+                            "description": "Property. Value for phase 2 of the power factor"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "minimum": -1,
+                            "maximum": 1,
+                            "description": "Property. Value for phase 3 of the power factor"
+                        }
+                    }
+                },
+                "activePower": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Active power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 1 of the active power"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 2 of the active power"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 3 of the active power"
+                        }
+                    }
+                },
+                "reactivePower": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Fundamental frequency reactive power. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volts-ampere-reactive'",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "description": "Property. Value for phase 1 of the reactive power"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "description": "Property. Value for phase 2 of the reactive power"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "description": "Property. Value for phase 3 of the reactive power"
+                        }
+                    }
+                },
+                "apparentPower": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Apparent power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'",
+                    "properties": {
+                        "L1": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 1 of the apparent power"
+                        },
+                        "L2": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 2 of the apparent power"
+                        },
+                        "L3": {
+                            "type": "number",
+                            "minimum": 0,
+                            "description": "Property. Value for phase 3 of the apparent power"
+                        }
+                    }
+                },
+                "totalApparentEnergyImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                },
+                "totalApparentEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "nominalWaterFlowHeating": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
+                    "description": "Property. Nominal water flow (refers to nominal heating capacity). Usually measured in m3/s"
+                },
+                "nominalSupplyWaterTemperatureHeating": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
+                    "description": "Property. Nominal supply water temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K)"
+                },
+                "nominalWaterFlowCooling": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
+                    "description": "Property. Nominal water flow (refers to nominal cooling capacity). Usually measured in m3/s"
+                },
+                "temperature": {
+                    "type": "number",
+                    "description": "Property. Temperature of the item"
+                },
+                "relativeHumidity": {
+                    "type": "number",
+                    "description": "Property. Relative Humidity of the air (a number between 0 and 1 representing the range of 0% to 100%)",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "co2": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Carbon Dioxide detected"
+                },
+                "pm25": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Particulate matter 2.5 micrometers or less in diameter"
+                },
+                "windDirection": {
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  "windSpeed": {
+                    "type": "number",
+                    "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
+                    "minimum": 0
+                  },
+                  "precipitation": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+                }
+
+
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type"
+    ]
+}
