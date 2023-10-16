@@ -1,0 +1,16 @@
+[
+{
+  "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
+  "type": "fortesie",
+  "@context": [
+    "http://forteseie-ld-context/fortesie-context.jsonld"
+  ],
+
+  "phaseVoltage": {
+    "type": "Property",
+    "value": 223.6,
+    "unitCode": "2G",
+    "observedAt": "2023-09-15T16:04:49Z"
+  }
+}
+]

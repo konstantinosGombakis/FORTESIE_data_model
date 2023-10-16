@@ -1,0 +1,70 @@
+version: "3.8"
+services:
+  # @context file is served from here
+  forteseie-ld-context:
+    labels:
+      org.eurodyn: 'forteseie_data_model'
+    image: httpd:alpine
+    hostname: forteseie-ld-context
+    container_name: forteseie-ld-context
+    ports:
+        - "3004:80"
+    networks:
+      - default
+    volumes:
+        - datamodel:/usr/local/apache2/htdocs/
+    
+  forteseie-orion:
+    labels:
+      org.eurodyn: 'forteseie_data_model'
+    image: quay.io/fiware/orion-ld:1.4.0
+    hostname: forteseie-orion
+    container_name: forteseie-orion
+    depends_on:
+      - mongo-db
+      - forteseie-ld-context
+    networks:
+      - default
+    ports:
+      - 1026:1026
+    command: -dbhost mongo-db -logLevel DEBUG
+    healthcheck:
+      test: curl --fail -s http://forteseie-orion:1026/version || exit 1
+
+  # Databases
+  mongo-db:
+    labels:
+      org.eurodyn: 'forteseie_data_model'
+    image: mongo:4.4
+    hostname: mongo-db
+    container_name: db-mongo
+    ports:
+      - 27017:27017
+    networks:
+      - default
+    volumes:
+      - mongo-db:/data/db
+      - mongo-config:/data/configdb
+    healthcheck:
+      test: |
+        host=`hostname --ip-address || echo '127.0.0.1'`; 
+        mongo --quiet $host/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1    
+      interval: 5s
+
+networks:
+  default:
+    labels:
+      org.eurodyn: 'forteseie_data_model'
+    ipam:
+      config:
+        - subnet: 172.20.1.0/24
+
+volumes:
+  mongo-db: ~
+  mongo-config: ~
+  datamodel:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/..
