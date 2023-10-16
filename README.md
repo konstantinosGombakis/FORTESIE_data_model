@@ -22,3 +22,7 @@ Link to the [example](./examples/example.jsonld) (keyvalues) for NGSI-LD
 <!-- Link to the [example](./examples/example-normalized.json) (normalized) for NGSI-V2 -->
 
 Link to the [example](./examples/example-normalized.jsonld) (normalized) for NGSI-LD
+
+## Demo
+
+A simple demo is located on the demo folder. Please read the [README-demo.md](./demo/README-demo.md) for more information.
