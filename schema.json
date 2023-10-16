@@ -15,6 +15,13 @@
         },
         {
             "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "fortesie"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be fortesie"
+                }, 
                 "phaseVoltage": {
                     "type": "object",
                     "description": "Property. Model:'https://schema.org/StructuredValue'. The voltage between each phase and neutral conductor. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Volts'",
