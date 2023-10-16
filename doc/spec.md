@@ -1,41 +1,24 @@
-<!-- 10-Header -->
-  
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: custom_data_model  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
+[Open License](https://github.com/smart-data-models//fortesie_data_model/blob/master/custom_data_model/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Global description: **Data model for H2020 FORTESIES project**  
+version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-Entity: custom_data_model  
-=========================
-<!-- /10-Header -->
-  
-<!-- 15-License -->
-  
+## List of properties  
 
-[Open License](https://github.com/smart-data-models//fortesie_data_model/blob/master/custom_data_model/LICENSE.md)  
-
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->
-  
-<!-- 20-Description -->
-  
-
-Global description: **Data model for H2020 FORTESIES project**  
-
-version: 0.0.1  
-<!-- /20-Description -->
-  
-<!-- 30-PropertiesList -->
-  
-
-
-## List of properties  
-
-
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `activePower[object]`: Active power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the active power    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `activePower[object]`: Active power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the active power    
 	- `L2[number]`: Property. Value for phase 2 of the active power    
 	- `L3[number]`: Property. Value for phase 3 of the active power    
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)
-	- `addressCountry[string]`: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'    
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'    
 	- `addressLocality[string]`: Property. The locality in which the street address is, and which is in the region. Model:'https://schema.org/addressLocality'    
 	- `addressRegion[string]`: Property. The region in which the locality is, and which is in the country. Model:'https://schema.org/addressRegion'    
 	- `district[string]`: Property. A district is a type of administrative division that, in some countries, is managed by the local government    
@@ -43,85 +26,38 @@ version: 0.0.1
 	- `postalCode[string]`: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'    
 	- `streetAddress[string]`: Property. The street address. Model:'https://schema.org/streetAddress'    
 	- `streetNr[string]`: Property. Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  
-- `apparentPower[object]`: Apparent power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the apparent power    
+- `alternateName[string]`: An alternative name for this item  - `apparentPower[object]`: Apparent power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the apparent power    
 	- `L2[number]`: Property. Value for phase 2 of the apparent power    
 	- `L3[number]`: Property. Value for phase 3 of the apparent power    
-- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)
-- `co2[number]`: Carbon Dioxide detected  
-- `current[object]`: Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the current    
+- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `co2[number]`: Carbon Dioxide detected  - `current[object]`: Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the current    
 	- `L2[number]`: Property. Value for phase 2 of the current    
 	- `L3[number]`: Property. Value for phase 3 of the current    
 	- `N[number]`: Property. Value for phase neutral of the current    
-- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  
-- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  
-- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  
-- `description[string]`: A description of this item  
-- `id[*]`: Unique identifier of the entity  
-- `location[*]`: GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  
-- `name[string]`: The name of this item  
-- `nominalSupplyWaterTemperatureHeating[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  
-- `nominalWaterFlowCooling[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  
-- `nominalWaterFlowHeating[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  
-- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  
-- `phaseToPhaseVoltage[object]`: Voltage between phases. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L12[number]`: Property. Value for phase 1 to phase 2 voltage    
+- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `nominalSupplyWaterTemperatureHeating[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  - `nominalWaterFlowCooling[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  - `nominalWaterFlowHeating[number]`: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `phaseToPhaseVoltage[object]`: Voltage between phases. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L12[number]`: Property. Value for phase 1 to phase 2 voltage    
 	- `L23[number]`: Property. Value for phase 2 to phase 3 voltage    
 	- `L31[number]`: Property. Value for phase 3 to phase 1 voltage    
-- `phaseVoltage[object]`: The voltage between each phase and neutral conductor. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the voltage    
+- `phaseVoltage[object]`: The voltage between each phase and neutral conductor. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the voltage    
 	- `L2[number]`: Property. Value for phase 2 of the voltage    
 	- `L3[number]`: Property. Value for phase 3 of the voltage    
-- `pm25[number]`: Particulate matter 2.5 micrometers or less in diameter  
-- `powerFactor[object]`: Power factor for each phase  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the power factor    
+- `pm25[number]`: Particulate matter 2.5 micrometers or less in diameter  - `powerFactor[object]`: Power factor for each phase  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the power factor    
 	- `L2[number]`: Property. Value for phase 2 of the power factor    
 	- `L3[number]`: Property. Value for phase 3 of the power factor    
-- `precipitation[number]`: Amount of water rain registered.   . Model: [https://schema.org/Number](https://schema.org/Number)
-- `reactivePower[object]`: Fundamental frequency reactive power. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-	- `L1[number]`: Property. Value for phase 1 of the reactive power    
+- `precipitation[number]`: Amount of water rain registered.   . Model: [https://schema.org/Number](https://schema.org/Number)- `reactivePower[object]`: Fundamental frequency reactive power. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `L1[number]`: Property. Value for phase 1 of the reactive power    
 	- `L2[number]`: Property. Value for phase 2 of the reactive power    
 	- `L3[number]`: Property. Value for phase 3 of the reactive power    
-- `relativeHumidity[number]`: Relative Humidity of the air (a number between 0 and 1 representing the range of 0% to 100%)  
-- `seeAlso[*]`: list of uri pointing to additional resources about the item  
-- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  
-- `temperature[number]`: Temperature of the item  
-- `totalActivePower[number]`: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `totalApparentEnergyExport[number]`: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-- `totalApparentEnergyImport[number]`: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `totalApparentPower[number]`: Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `totalReactivePower[number]`: Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `windDirection[number]`: Direction of the wind bet  . Model: [http://schema.org/Number](http://schema.org/Number)
-- `windSpeed[number]`: Intensity of the wind  . Model: [http//schema.org/Number](http//schema.org/Number)
-<!-- /30-PropertiesList -->
-  
-<!-- 35-RequiredProperties -->
-  
-
-Required properties  
-- `id`  
-- `type`  
-<!-- /35-RequiredProperties -->
-  
-<!-- 40-RequiredProperties -->
-  
-<!-- /40-RequiredProperties -->
-  
-<!-- 50-DataModelHeader -->
-  
-
-## Data Model description of properties  
-
-Sorted alphabetically (click for details)  
-<!-- /50-DataModelHeader -->
-  
-<!-- 60-ModelYaml -->
-  
+- `relativeHumidity[number]`: Relative Humidity of the air (a number between 0 and 1 representing the range of 0% to 100%)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `temperature[number]`: Temperature of the item  - `totalActivePower[number]`: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalApparentEnergyExport[number]`: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `totalApparentEnergyImport[number]`: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalApparentPower[number]`: Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalReactivePower[number]`: Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be fortesie  - `windDirection[number]`: Direction of the wind bet  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: Intensity of the wind  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+Required properties  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Data Model description of properties  
+Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
-
-```yaml  
+```yaml  
 custom_data_model:    
   description: Data model for H2020 FORTESIES project    
   properties:    
@@ -615,6 +551,13 @@ custom_data_model:
         model: https://schema.org/Number    
         type: Property    
         units: volt-ampere-reactive    
+    type:    
+      description: NGSI Entity type. It has to be fortesie    
+      enum:    
+        - fortesie    
+      type: string    
+      x-ngsi:    
+        type: Property    
     windDirection:    
       description: Direction of the wind bet    
       maximum: 360    
@@ -642,400 +585,386 @@ custom_data_model:
   x-version: 0.0.1    
 ```  
 </details>    
-<!-- /60-ModelYaml -->
-  
-<!-- 70-MiddleNotes -->
-  
-<!-- /70-MiddleNotes -->
-  
-<!-- 80-Examples -->
-  
-
-## Example payloads    
-
-#### custom_data_model NGSI-v2 key-values Example    
-
-Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Example payloads    
+#### custom_data_model NGSI-v2 key-values Example    
+Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:MH10_PM25:mh10_002",  
+```json  
+{  
+    "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
     "type": "fortesie",  
-    "phaseVoltage":   223.6,  
-    "phaseToPhaseVoltage":   [252.2,223,224.3],  
-    "current":   2.7,  
-    "totalActivePower":   344.8,  
-    "totalReactivePower":   54.7,  
-    "totalApparentPower":   45.7,  
-    "powerFactor":   98.2,  
-    "activePower":   56.2,  
-    "reactivePower":   32.3,  
-    "apparentPower":   45.8,  
-    "totalApparentEnergyImport":   34.2,  
-    "totalApparentEnergyExport":   4.2,  
-    "nominalWaterFlowHeating":   54.1,  
-    "nominalSupplyWaterTemperatureHeating":   23.8,  
-    "nominalReturnWaterTemperatureHeating":   10.3,  
-    "temperature":   18.4,  
-    "relativeHumidity":   39.0,  
-    "pm25":   36.0,  
-    "co2":   690.5,  
-    "windSpeed":   2.5,  
-    "windDirection":   231,  
-    "precipitation":   34  
-}  
-```  
-</details>  
-
-#### custom_data_model NGSI-v2 normalized Example    
-
-Here is an example of a custom_data_model in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
-<details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:MH10_PM25:mh10_002",  
-    "type": "fortesie",  
-    "phaseVoltage": {  
-      "type": "Property",  
-      "value": 223.6,  
-      "unitCode": "2G",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "phaseToPhaseVoltage": {  
-      "type": "Property",  
-      "value": [252.2,223,224.3],  
-      "unitCode": "2G",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "current": {  
-      "type": "Property",  
-      "value": 2.7,  
-      "unitCode": "AMP",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalActivePower": {  
-      "type": "Property",  
-      "value": 344.8,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalReactivePower": {  
-      "type": "Property",  
-      "value": 54.7,  
-      "unitCode": "K2",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentPower": {  
-      "type": "Property",  
-      "value": 45.7,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "powerFactor": {  
-      "type": "Property",  
-      "value": 98.2,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "activePower": {  
-      "type": "Property",  
-      "value": 56.2,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "reactivePower": {  
-      "type": "Property",  
-      "value": 32.3,  
-      "unitCode": "K2",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "apparentPower": {  
-      "type": "Property",  
-      "value": 45.8,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentEnergyImport": {  
-      "type": "Property",  
-      "value": 34.2,  
-      "unitCode": "KWH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentEnergyExport": {  
-      "type": "Property",  
-      "value": 4.2,  
-      "unitCode": "KWH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalWaterFlowHeating": {  
-      "type": "Property",  
-      "value": 54.1,  
-      "unitCode": "MQS",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalSupplyWaterTemperatureHeating": {  
-      "type": "Property",  
-      "value": 23.8,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalReturnWaterTemperatureHeating": {  
-      "type": "Property",  
-      "value": 10.3,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "temperature": {  
-      "type": "Property",  
-      "value": 18.4,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "relativeHumidity": {  
-      "type": "Property",  
-      "value": 39.0,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "pm25": {  
-      "type": "Property",  
-      "value": 36.0,  
-      "unitCode": "GQ",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "co2": {  
-      "type": "Property",  
-      "value": 690.5,  
-      "unitCode": "59",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "windSpeed": {  
-      "type": "Property",  
-      "value": 2.5,  
-      "unitCode": "KMH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "windDirection": {  
-      "type": "Property",  
-      "value": 231,  
-      "unitCode": "DD",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "precipitation": {  
-      "type": "Property",  
-      "value": 34,  
-      "unitCode": "MMT",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    }  
-}  
-```  
-</details>  
-
-#### custom_data_model NGSI-LD key-values Example    
-
-Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
-<details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:MH10_PM25:mh10_002",  
-    "type": "fortesie",  
-    "@context": [  
-      "http://forteseie-ld-context/merge_data_model.jsonld"  
+    "phaseVoltage": 223.6,  
+    "phaseToPhaseVoltage": [  
+        252.2,  
+        223,  
+        224.3  
     ],  
-      "phaseVoltage":   223.6,  
-    "phaseToPhaseVoltage":   [252.2,223,224.3],  
-    "current":   2.7,  
-    "totalActivePower":   344.8,  
-    "totalReactivePower":   54.7,  
-    "totalApparentPower":   45.7,  
-    "powerFactor":   98.2,  
-    "activePower":   56.2,  
-    "reactivePower":   32.3,  
-    "apparentPower":   45.8,  
-    "totalApparentEnergyImport":   34.2,  
-    "totalApparentEnergyExport":   4.2,  
-    "nominalWaterFlowHeating":   54.1,  
-    "nominalSupplyWaterTemperatureHeating":   23.8,  
-    "nominalReturnWaterTemperatureHeating":   10.3,  
-    "temperature":   18.4,  
-    "relativeHumidity":   39.0,  
-    "pm25":   36.0,  
-    "co2":   690.5,  
-    "windSpeed":   2.5,  
-    "windDirection":   231,  
-    "precipitation":   34  
+    "current": 2.7,  
+    "totalActivePower": 344.8,  
+    "totalReactivePower": 54.7,  
+    "totalApparentPower": 45.7,  
+    "powerFactor": 98.2,  
+    "activePower": 56.2,  
+    "reactivePower": 32.3,  
+    "apparentPower": 45.8,  
+    "totalApparentEnergyImport": 34.2,  
+    "totalApparentEnergyExport": 4.2,  
+    "nominalWaterFlowHeating": 54.1,  
+    "nominalSupplyWaterTemperatureHeating": 23.8,  
+    "nominalReturnWaterTemperatureHeating": 10.3,  
+    "temperature": 18.4,  
+    "relativeHumidity": 39.0,  
+    "pm25": 36.0,  
+    "co2": 690.5,  
+    "windSpeed": 2.5,  
+    "windDirection": 231,  
+    "precipitation": 34  
 }  
 ```  
 </details>  
-
-#### custom_data_model NGSI-LD normalized Example    
-
-Here is an example of a custom_data_model in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### custom_data_model NGSI-v2 normalized Example    
+Here is an example of a custom_data_model in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:MH10_PM25:mh10_002",  
-    "type": "fortesie",  
-    "@context": [  
-      "http://forteseie-ld-context/merge_data_model.jsonld"  
+```json  
+{  
+  "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
+  "type": "fortesie",  
+  "phaseVoltage": {  
+    "type": "Property",  
+    "value": 223.6,  
+    "unitCode": "2G",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "phaseToPhaseVoltage": {  
+    "type": "Property",  
+    "value": [  
+      252.2,  
+      223,  
+      224.3  
     ],  
-    "phaseVoltage": {  
-      "type": "Property",  
-      "value": 223.6,  
-      "unitCode": "2G",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "phaseToPhaseVoltage": {  
-      "type": "Property",  
-      "value": [252.2,223,224.3],  
-      "unitCode": "2G",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "current": {  
-      "type": "Property",  
-      "value": 2.7,  
-      "unitCode": "AMP",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalActivePower": {  
-      "type": "Property",  
-      "value": 344.8,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalReactivePower": {  
-      "type": "Property",  
-      "value": 54.7,  
-      "unitCode": "K2",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentPower": {  
-      "type": "Property",  
-      "value": 45.7,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "powerFactor": {  
-      "type": "Property",  
-      "value": 98.2,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "activePower": {  
-      "type": "Property",  
-      "value": 56.2,  
-      "unitCode": "K1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "reactivePower": {  
-      "type": "Property",  
-      "value": 32.3,  
-      "unitCode": "K2",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "apparentPower": {  
-      "type": "Property",  
-      "value": 45.8,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentEnergyImport": {  
-      "type": "Property",  
-      "value": 34.2,  
-      "unitCode": "KWH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "totalApparentEnergyExport": {  
-      "type": "Property",  
-      "value": 4.2,  
-      "unitCode": "KWH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalWaterFlowHeating": {  
-      "type": "Property",  
-      "value": 54.1,  
-      "unitCode": "MQS",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalSupplyWaterTemperatureHeating": {  
-      "type": "Property",  
-      "value": 23.8,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "nominalReturnWaterTemperatureHeating": {  
-      "type": "Property",  
-      "value": 10.3,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "temperature": {  
-      "type": "Property",  
-      "value": 18.4,  
-      "unitCode": "CEL",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "relativeHumidity": {  
-      "type": "Property",  
-      "value": 39.0,  
-      "unitCode": "P1",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "pm25": {  
-      "type": "Property",  
-      "value": 36.0,  
-      "unitCode": "GQ",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "co2": {  
-      "type": "Property",  
-      "value": 690.5,  
-      "unitCode": "59",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "windSpeed": {  
-      "type": "Property",  
-      "value": 2.5,  
-      "unitCode": "KMH",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "windDirection": {  
-      "type": "Property",  
-      "value": 231,  
-      "unitCode": "DD",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    },  
-    "precipitation": {  
-      "type": "Property",  
-      "value": 34,  
-      "unitCode": "MMT",  
-      "observedAt": "2023-09-15T16:04:49Z"  
-    }  
+    "unitCode": "2G",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "current": {  
+    "type": "Property",  
+    "value": 2.7,  
+    "unitCode": "AMP",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalActivePower": {  
+    "type": "Property",  
+    "value": 344.8,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalReactivePower": {  
+    "type": "Property",  
+    "value": 54.7,  
+    "unitCode": "K2",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentPower": {  
+    "type": "Property",  
+    "value": 45.7,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "powerFactor": {  
+    "type": "Property",  
+    "value": 98.2,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "activePower": {  
+    "type": "Property",  
+    "value": 56.2,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "reactivePower": {  
+    "type": "Property",  
+    "value": 32.3,  
+    "unitCode": "K2",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "apparentPower": {  
+    "type": "Property",  
+    "value": 45.8,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentEnergyImport": {  
+    "type": "Property",  
+    "value": 34.2,  
+    "unitCode": "KWH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentEnergyExport": {  
+    "type": "Property",  
+    "value": 4.2,  
+    "unitCode": "KWH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalWaterFlowHeating": {  
+    "type": "Property",  
+    "value": 54.1,  
+    "unitCode": "MQS",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalSupplyWaterTemperatureHeating": {  
+    "type": "Property",  
+    "value": 23.8,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalReturnWaterTemperatureHeating": {  
+    "type": "Property",  
+    "value": 10.3,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 18.4,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 39.0,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "pm25": {  
+    "type": "Property",  
+    "value": 36.0,  
+    "unitCode": "GQ",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "co2": {  
+    "type": "Property",  
+    "value": 690.5,  
+    "unitCode": "59",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "windSpeed": {  
+    "type": "Property",  
+    "value": 2.5,  
+    "unitCode": "KMH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "windDirection": {  
+    "type": "Property",  
+    "value": 231,  
+    "unitCode": "DD",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "precipitation": {  
+    "type": "Property",  
+    "value": 34,  
+    "unitCode": "MMT",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  }  
 }  
 ```  
-</details><!-- /80-Examples -->
-  
-<!-- 90-FooterNotes -->
-  
-<!-- /90-FooterNotes -->
-  
-<!-- 95-Units -->
-  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
-<!-- /95-Units -->
-  
-<!-- 97-LastFooter -->
-  
+</details>  
+#### custom_data_model NGSI-LD key-values Example    
+Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
+  "type": "fortesie",  
+  "@context": [  
+    "http://forteseie-ld-context/merge_data_model.jsonld"  
+  ],  
+  "phaseVoltage": 223.6,  
+  "phaseToPhaseVoltage": [  
+    252.2,  
+    223,  
+    224.3  
+  ],  
+  "current": 2.7,  
+  "totalActivePower": 344.8,  
+  "totalReactivePower": 54.7,  
+  "totalApparentPower": 45.7,  
+  "powerFactor": 98.2,  
+  "activePower": 56.2,  
+  "reactivePower": 32.3,  
+  "apparentPower": 45.8,  
+  "totalApparentEnergyImport": 34.2,  
+  "totalApparentEnergyExport": 4.2,  
+  "nominalWaterFlowHeating": 54.1,  
+  "nominalSupplyWaterTemperatureHeating": 23.8,  
+  "nominalReturnWaterTemperatureHeating": 10.3,  
+  "temperature": 18.4,  
+  "relativeHumidity": 39.0,  
+  "pm25": 36.0,  
+  "co2": 690.5,  
+  "windSpeed": 2.5,  
+  "windDirection": 231,  
+  "precipitation": 34  
+}  
+```  
+</details>  
+#### custom_data_model NGSI-LD normalized Example    
+Here is an example of a custom_data_model in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
+  "type": "fortesie",  
+  "@context": [  
+    "http://forteseie-ld-context/merge_data_model.jsonld"  
+  ],  
+  "phaseVoltage": {  
+    "type": "Property",  
+    "value": 223.6,  
+    "unitCode": "2G",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "phaseToPhaseVoltage": {  
+    "type": "Property",  
+    "value": [  
+      252.2,  
+      223,  
+      224.3  
+    ],  
+    "unitCode": "2G",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "current": {  
+    "type": "Property",  
+    "value": 2.7,  
+    "unitCode": "AMP",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalActivePower": {  
+    "type": "Property",  
+    "value": 344.8,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalReactivePower": {  
+    "type": "Property",  
+    "value": 54.7,  
+    "unitCode": "K2",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentPower": {  
+    "type": "Property",  
+    "value": 45.7,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "powerFactor": {  
+    "type": "Property",  
+    "value": 98.2,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "activePower": {  
+    "type": "Property",  
+    "value": 56.2,  
+    "unitCode": "K1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "reactivePower": {  
+    "type": "Property",  
+    "value": 32.3,  
+    "unitCode": "K2",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "apparentPower": {  
+    "type": "Property",  
+    "value": 45.8,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentEnergyImport": {  
+    "type": "Property",  
+    "value": 34.2,  
+    "unitCode": "KWH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "totalApparentEnergyExport": {  
+    "type": "Property",  
+    "value": 4.2,  
+    "unitCode": "KWH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalWaterFlowHeating": {  
+    "type": "Property",  
+    "value": 54.1,  
+    "unitCode": "MQS",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalSupplyWaterTemperatureHeating": {  
+    "type": "Property",  
+    "value": 23.8,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "nominalReturnWaterTemperatureHeating": {  
+    "type": "Property",  
+    "value": 10.3,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 18.4,  
+    "unitCode": "CEL",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 39.0,  
+    "unitCode": "P1",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "pm25": {  
+    "type": "Property",  
+    "value": 36.0,  
+    "unitCode": "GQ",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "co2": {  
+    "type": "Property",  
+    "value": 690.5,  
+    "unitCode": "59",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "windSpeed": {  
+    "type": "Property",  
+    "value": 2.5,  
+    "unitCode": "KMH",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "windDirection": {  
+    "type": "Property",  
+    "value": 231,  
+    "unitCode": "DD",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  },  
+  "precipitation": {  
+    "type": "Property",  
+    "value": 34,  
+    "unitCode": "MMT",  
+    "observedAt": "2023-09-15T16:04:49Z"  
+  }  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
 ---  
-
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
-  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
