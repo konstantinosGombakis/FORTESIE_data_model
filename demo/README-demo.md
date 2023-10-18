@@ -3,9 +3,9 @@
 
 
 The tutorial uses [cUrl](https://ec.haxx.se/) commands throughout, but is also available as
-[Postman documentation](https://www.postman.com/glompos21/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&creator=9192452)
+[Postman documentation](https://www.postman.com/konstantinosgombakis/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&creator=9192452)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/glompos21/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&creator=9192452)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/konstantinosgombakis/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&creator=9192452)
 
 Additional several docker images are needed.
 

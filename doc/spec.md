@@ -645,196 +645,6 @@ custom_data_model:
 
 ## Example payloads    
 
-#### custom_data_model NGSI-v2 key-values Example    
-
-Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
-<details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
-    "type": "fortesie",  
-    "phaseVoltage": 223.6,  
-    "phaseToPhaseVoltage": [  
-        252.2,  
-        223,  
-        224.3  
-    ],  
-    "current": 2.7,  
-    "totalActivePower": 344.8,  
-    "totalReactivePower": 54.7,  
-    "totalApparentPower": 45.7,  
-    "powerFactor": 98.2,  
-    "activePower": 56.2,  
-    "reactivePower": 32.3,  
-    "apparentPower": 45.8,  
-    "totalApparentEnergyImport": 34.2,  
-    "totalApparentEnergyExport": 4.2,  
-    "nominalWaterFlowHeating": 54.1,  
-    "nominalSupplyWaterTemperatureHeating": 23.8,  
-    "nominalReturnWaterTemperatureHeating": 10.3,  
-    "temperature": 18.4,  
-    "relativeHumidity": 39.0,  
-    "pm25": 36.0,  
-    "co2": 690.5,  
-    "windSpeed": 2.5,  
-    "windDirection": 231,  
-    "precipitation": 34  
-}  
-```  
-</details>  
-
-#### custom_data_model NGSI-v2 normalized Example    
-
-Here is an example of a custom_data_model in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
-<details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
-  "type": "fortesie",  
-  "phaseVoltage": {  
-    "type": "Property",  
-    "value": 223.6,  
-    "unitCode": "2G",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "phaseToPhaseVoltage": {  
-    "type": "Property",  
-    "value": [  
-      252.2,  
-      223,  
-      224.3  
-    ],  
-    "unitCode": "2G",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "current": {  
-    "type": "Property",  
-    "value": 2.7,  
-    "unitCode": "AMP",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "totalActivePower": {  
-    "type": "Property",  
-    "value": 344.8,  
-    "unitCode": "K1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "totalReactivePower": {  
-    "type": "Property",  
-    "value": 54.7,  
-    "unitCode": "K2",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "totalApparentPower": {  
-    "type": "Property",  
-    "value": 45.7,  
-    "unitCode": "K1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "powerFactor": {  
-    "type": "Property",  
-    "value": 98.2,  
-    "unitCode": "P1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "activePower": {  
-    "type": "Property",  
-    "value": 56.2,  
-    "unitCode": "K1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "reactivePower": {  
-    "type": "Property",  
-    "value": 32.3,  
-    "unitCode": "K2",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "apparentPower": {  
-    "type": "Property",  
-    "value": 45.8,  
-    "unitCode": "P1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "totalApparentEnergyImport": {  
-    "type": "Property",  
-    "value": 34.2,  
-    "unitCode": "KWH",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "totalApparentEnergyExport": {  
-    "type": "Property",  
-    "value": 4.2,  
-    "unitCode": "KWH",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "nominalWaterFlowHeating": {  
-    "type": "Property",  
-    "value": 54.1,  
-    "unitCode": "MQS",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "nominalSupplyWaterTemperatureHeating": {  
-    "type": "Property",  
-    "value": 23.8,  
-    "unitCode": "CEL",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "nominalReturnWaterTemperatureHeating": {  
-    "type": "Property",  
-    "value": 10.3,  
-    "unitCode": "CEL",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 18.4,  
-    "unitCode": "CEL",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 39.0,  
-    "unitCode": "P1",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "pm25": {  
-    "type": "Property",  
-    "value": 36.0,  
-    "unitCode": "GQ",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "co2": {  
-    "type": "Property",  
-    "value": 690.5,  
-    "unitCode": "59",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "windSpeed": {  
-    "type": "Property",  
-    "value": 2.5,  
-    "unitCode": "KMH",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "windDirection": {  
-    "type": "Property",  
-    "value": 231,  
-    "unitCode": "DD",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  },  
-  "precipitation": {  
-    "type": "Property",  
-    "value": 34,  
-    "unitCode": "MMT",  
-    "observedAt": "2023-09-15T16:04:49Z"  
-  }  
-}  
-```  
-</details>  
-
 #### custom_data_model NGSI-LD key-values Example    
 
 Here is an example of a custom_data_model in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
@@ -846,7 +656,7 @@ Here is an example of a custom_data_model in JSON-LD format as key-values. This 
   "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
   "type": "fortesie",  
   "@context": [  
-    "http://forteseie-ld-context/merge_data_model.jsonld"  
+    "http://forteseie-ld-context/fortesie-context.jsonld"
   ],  
   "phaseVoltage": 223.6,  
   "phaseToPhaseVoltage": [  
@@ -889,7 +699,7 @@ Here is an example of a custom_data_model in JSON-LD format as normalized. This 
   "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
   "type": "fortesie",  
   "@context": [  
-    "http://forteseie-ld-context/merge_data_model.jsonld"  
+    "http://forteseie-ld-context/fortesie-context.jsonld"
   ],  
   "phaseVoltage": {  
     "type": "Property",  
