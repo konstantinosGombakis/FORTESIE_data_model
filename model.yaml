@@ -98,6 +98,13 @@ custom_data_model:
       x-ngsi:
         type: Property
 
+    contactStatus:
+      description: The contact indication, true = broken (open), false = in place (closed)
+      readOnly: yes
+      type: boolean
+      x-ngsi:
+        type: Property
+
     current:
       description: Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       properties:
@@ -143,6 +150,23 @@ custom_data_model:
       description: A description of this item
       type: string
       x-ngsi:
+        type: Property
+
+    frequency:
+      description: The frequency of the circuit. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: Hertz
+
+    gasConsumption:
+      description: Gas consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20).'
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
         type: Property
 
     id:
@@ -491,6 +515,24 @@ custom_data_model:
       type: number
       x-ngsi:
         type: Property
+
+    thermalEnergyExport:
+      description: Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour.
+
+    thermalEnergyImport:
+      description: Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour.
 
     totalActivePower:
       description: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
