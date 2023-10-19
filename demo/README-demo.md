@@ -47,7 +47,7 @@ The response will look similar to the following:
 ```
 ### Provition device urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001 
 ```console
-./importJSON.sh sample-data_model_for_partners.json
+./importJSON.sh sample-data_model_all_properties.json
 ```
 
 ### Request data for device urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001  without providing @context
@@ -124,7 +124,7 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
   "https://smartdatamodels.org/dataModel.Energy/apparentPower": {
     "type": "Property",
     "value": 45.8,
-    "unitCode": "P1",
+    "unitCode": "K1",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "https://smartdatamodels.org/dataModel.Energy/totalApparentEnergyImport": {
@@ -137,6 +137,12 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "type": "Property",
     "value": 4.2,
     "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://smartdatamodels.org/dataModel.Energy/frequency": {
+    "type": "Property",
+    "value": 49.8,
+    "unitCode": "HTZ",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "https://smartdatamodels.org/dataModel.S4BLDG/nominalWaterFlowHeating": {
@@ -155,6 +161,24 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "type": "Property",
     "value": 10.3,
     "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://raw.githubusercontent.com/konstantinosGombakis/FORTESIE_data_model/main/schema.json#/thermalEnergyImport": {
+    "type": "Property",
+    "value": 12.3,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://raw.githubusercontent.com/konstantinosGombakis/FORTESIE_data_model/main/schema.json#/thermalEnergyExport": {
+    "type": "Property",
+    "value": 1.3,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://raw.githubusercontent.com/konstantinosGombakis/FORTESIE_data_model/main/schema.json#/gasConsumption": {
+    "type": "Property",
+    "value": 1.3,
+    "unitCode": "KWH",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "https://smartdatamodels.org/dataModel.Environment/temperature": {
@@ -198,8 +222,14 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "value": 34,
     "unitCode": "MMT",
     "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://raw.githubusercontent.com/konstantinosGombakis/FORTESIE_data_model/main/schema.json#/contactStatus": {
+    "type": "Property",
+    "value": 1,
+    "unitCode": "P1",
+    "observedAt": "2023-09-15T16:04:49.000Z"
   }
-}  
+}
 ```  
 </details>  
 
@@ -279,7 +309,7 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
   "apparentPower": {
     "type": "Property",
     "value": 45.8,
-    "unitCode": "P1",
+    "unitCode": "K1",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "totalApparentEnergyImport": {
@@ -292,6 +322,12 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "type": "Property",
     "value": 4.2,
     "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "frequency": {
+    "type": "Property",
+    "value": 49.8,
+    "unitCode": "HTZ",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "nominalWaterFlowHeating": {
@@ -310,6 +346,24 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "type": "Property",
     "value": 10.3,
     "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "thermalEnergyImport": {
+    "type": "Property",
+    "value": 12.3,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "thermalEnergyExport": {
+    "type": "Property",
+    "value": 1.3,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "gasConsumption": {
+    "type": "Property",
+    "value": 1.3,
+    "unitCode": "KWH",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
   "temperature": {
@@ -353,6 +407,12 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "value": 34,
     "unitCode": "MMT",
     "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "contactStatus": {
+    "type": "Property",
+    "value": 1,
+    "unitCode": "P1",
+    "observedAt": "2023-09-15T16:04:49.000Z"
   }
 }
 ```
@@ -360,7 +420,7 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
 
 ### Provition device urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002
 ```console
-./importJSON.sh sample-data_model_for_partners_2.json 
+./importJSON.sh sample-data_model_one_property.json
 ```
 
 ### Request data for device urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002  without providing @context

@@ -2,9 +2,9 @@
 	"info": {
 		"_postman_id": "51008a35-c2e2-4a3f-b72a-175e210e24b6",
 		"name": "Fortesie_data_model",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9192452",
-		"_collection_link": "https://www.postman.com/glompos21/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&source=collection_link&creator=9192452"
+		"_collection_link": "https://www.postman.com/konstantinosgombakis/workspace/fortesie-data-model/collection/9192452-51008a35-c2e2-4a3f-b72a-175e210e24b6?action=share&source=collection_link&creator=9192452"
 	},
 	"item": [
 		{
@@ -12,7 +12,17 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:1026/version"
+				"url": {
+					"raw": "http://localhost:1026/version",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"version"
+					]
+				}
 			},
 			"response": []
 		},
@@ -34,9 +44,22 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n    {\r\n        \"id\": \"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001\",\r\n        \"type\": \"fortesie\",\r\n        \"@context\": [\r\n            \"http://forteseie-ld-context/fortesie-context.jsonld\"\r\n        ],\r\n        \"phaseVoltage\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 223.6,\r\n            \"unitCode\": \"2G\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"phaseToPhaseVoltage\": {\r\n            \"type\": \"Property\",\r\n            \"value\": [\r\n                252.2,\r\n                223,\r\n                224.3\r\n            ],\r\n            \"unitCode\": \"2G\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"current\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 2.7,\r\n            \"unitCode\": \"AMP\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalActivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 344.8,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalReactivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 54.7,\r\n            \"unitCode\": \"K2\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentPower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 45.7,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"powerFactor\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 98.2,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"activePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 56.2,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"reactivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 32.3,\r\n            \"unitCode\": \"K2\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"apparentPower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 45.8,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentEnergyImport\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 34.2,\r\n            \"unitCode\": \"KWH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentEnergyExport\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 4.2,\r\n            \"unitCode\": \"KWH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalWaterFlowHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 54.1,\r\n            \"unitCode\": \"MQS\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalSupplyWaterTemperatureHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 23.8,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalReturnWaterTemperatureHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 10.3,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"temperature\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 18.4,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"relativeHumidity\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 39.0,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"pm25\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 36.0,\r\n            \"unitCode\": \"GQ\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"co2\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 690.5,\r\n            \"unitCode\": \"59\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"windSpeed\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 2.5,\r\n            \"unitCode\": \"KMH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"windDirection\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 231,\r\n            \"unitCode\": \"DD\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"precipitation\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 34,\r\n            \"unitCode\": \"MMT\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        }\r\n    }\r\n]"
+					"raw": "[\r\n  {\r\n    \"id\": \"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001\",\r\n    \"type\": \"fortesie\",\r\n    \"@context\": [\r\n      \"http://forteseie-ld-context/fortesie-context.jsonld\"\r\n    ],\r\n  \r\n    \"phaseVoltage\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 223.6,\r\n      \"unitCode\": \"2G\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"phaseToPhaseVoltage\": {\r\n      \"type\": \"Property\",\r\n      \"value\": [252.2,223,224.3],\r\n      \"unitCode\": \"2G\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"current\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 2.7,\r\n      \"unitCode\": \"AMP\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"totalActivePower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 344.8,\r\n      \"unitCode\": \"K1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"totalReactivePower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 54.7,\r\n      \"unitCode\": \"K2\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"totalApparentPower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 45.7,\r\n      \"unitCode\": \"K1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"powerFactor\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 98.2,\r\n      \"unitCode\": \"P1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"activePower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 56.2,\r\n      \"unitCode\": \"K1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"reactivePower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 32.3,\r\n      \"unitCode\": \"K2\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"apparentPower\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 45.8,\r\n      \"unitCode\": \"K1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"totalApparentEnergyImport\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 34.2,\r\n      \"unitCode\": \"KWH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"totalApparentEnergyExport\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 4.2,\r\n      \"unitCode\": \"KWH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"frequency\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 49.8,\r\n      \"unitCode\": \"HTZ\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"nominalWaterFlowHeating\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 54.1,\r\n      \"unitCode\": \"MQS\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"nominalSupplyWaterTemperatureHeating\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 23.8,\r\n      \"unitCode\": \"CEL\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"nominalReturnWaterTemperatureHeating\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 10.3,\r\n      \"unitCode\": \"CEL\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"thermalEnergyImport\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 12.3,\r\n      \"unitCode\": \"KWH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"thermalEnergyExport\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 1.3,\r\n      \"unitCode\": \"KWH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"gasConsumption\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 1.3,\r\n      \"unitCode\": \"KWH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"temperature\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 18.4,\r\n      \"unitCode\": \"CEL\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"relativeHumidity\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 39.0,\r\n      \"unitCode\": \"P1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"pm25\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 36.0,\r\n      \"unitCode\": \"GQ\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"co2\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 690.5,\r\n      \"unitCode\": \"59\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"windSpeed\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 2.5,\r\n      \"unitCode\": \"KMH\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"windDirection\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 231,\r\n      \"unitCode\": \"DD\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"precipitation\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 34,\r\n      \"unitCode\": \"MMT\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    },\r\n    \"contactStatus\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 1,\r\n      \"unitCode\": \"P1\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    }\r\n  }\r\n  ]"
 				},
-				"url": "http://localhost:1026/ngsi-ld/v1/entityOperations/upsert"
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
 			},
 			"response": []
 		},
@@ -45,7 +68,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001"
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001"
+					]
+				}
 			},
 			"response": []
 		},
@@ -70,12 +106,25 @@
 						"type": "text"
 					}
 				],
-				"url": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001"
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Create urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",
+			"name": "Create urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -92,36 +141,22 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n    {\r\n        \"id\": \"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001\",\r\n        \"type\": \"fortesie\",\r\n        \"@context\": [\r\n            \"http://forteseie-ld-context/fortesie-context.jsonld\"\r\n        ],\r\n        \"phaseVoltage\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 223.6,\r\n            \"unitCode\": \"2G\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"phaseToPhaseVoltage\": {\r\n            \"type\": \"Property\",\r\n            \"value\": [\r\n                252.2,\r\n                223,\r\n                224.3\r\n            ],\r\n            \"unitCode\": \"2G\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"current\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 2.7,\r\n            \"unitCode\": \"AMP\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalActivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 344.8,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalReactivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 54.7,\r\n            \"unitCode\": \"K2\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentPower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 45.7,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"powerFactor\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 98.2,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"activePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 56.2,\r\n            \"unitCode\": \"K1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"reactivePower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 32.3,\r\n            \"unitCode\": \"K2\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"apparentPower\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 45.8,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentEnergyImport\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 34.2,\r\n            \"unitCode\": \"KWH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"totalApparentEnergyExport\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 4.2,\r\n            \"unitCode\": \"KWH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalWaterFlowHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 54.1,\r\n            \"unitCode\": \"MQS\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalSupplyWaterTemperatureHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 23.8,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"nominalReturnWaterTemperatureHeating\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 10.3,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"temperature\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 18.4,\r\n            \"unitCode\": \"CEL\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"relativeHumidity\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 39.0,\r\n            \"unitCode\": \"P1\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"pm25\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 36.0,\r\n            \"unitCode\": \"GQ\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"co2\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 690.5,\r\n            \"unitCode\": \"59\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"windSpeed\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 2.5,\r\n            \"unitCode\": \"KMH\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"windDirection\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 231,\r\n            \"unitCode\": \"DD\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        },\r\n        \"precipitation\": {\r\n            \"type\": \"Property\",\r\n            \"value\": 34,\r\n            \"unitCode\": \"MMT\",\r\n            \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n        }\r\n    }\r\n]"
+					"raw": "[\r\n  {\r\n    \"id\": \"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002\",\r\n    \"type\": \"fortesie\",\r\n    \"@context\": [\r\n      \"http://forteseie-ld-context/fortesie-context.jsonld\"\r\n    ],\r\n  \r\n    \"phaseVoltage\": {\r\n      \"type\": \"Property\",\r\n      \"value\": 223.6,\r\n      \"unitCode\": \"2G\",\r\n      \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n    }\r\n  }\r\n  ]\r\n  "
 				},
-				"url": "http://localhost:1026/ngsi-ld/v1/entityOperations/upsert"
-			},
-			"response": []
-		},
-		{
-			"name": "Create urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/ld+json",
-						"type": "text"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n{\r\n  \"id\": \"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002\",\r\n  \"type\": \"fortesie\",\r\n  \"@context\": [\r\n    \"http://forteseie-ld-context/fortesie-context.jsonld\"\r\n  ],\r\n\r\n  \"phaseVoltage\": {\r\n    \"type\": \"Property\",\r\n    \"value\": 223.6,\r\n    \"unitCode\": \"2G\",\r\n    \"observedAt\": \"2023-09-15T16:04:49Z\"\r\n  }\r\n}\r\n]"
-				},
-				"url": "http://localhost:1026/ngsi-ld/v1/entityOperations/upsert"
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
 			},
 			"response": []
 		},
@@ -130,7 +165,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": ""
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002"
+					]
+				}
 			},
 			"response": []
 		},
@@ -138,8 +186,32 @@
 			"name": "Providing @context, get urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": ""
+				"header": [
+					{
+						"key": "Link",
+						"value": "<http://forteseie-ld-context/fortesie-context.jsonld>; rel=\"http://www.w3.org/ns/json-ld#context\"",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						"urn:ngsi-ld:FORTESIE:DEMO-1:device-id-002"
+					]
+				}
 			},
 			"response": []
 		}

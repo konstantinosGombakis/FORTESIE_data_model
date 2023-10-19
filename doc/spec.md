@@ -34,6 +34,7 @@ version: 0.0.1
 	- `L3[number]`: Property. Value for phase 3 of the apparent power    
 - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)
 - `co2[number]`: Carbon Dioxide detected  
+- `contactStatus[boolean]`: The contact indication, true = broken (open), false = in place (closed)  
 - `current[object]`: Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
 	- `L1[number]`: Property. Value for phase 1 of the current    
 	- `L2[number]`: Property. Value for phase 2 of the current    
@@ -43,6 +44,8 @@ version: 0.0.1
 - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  
 - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  
 - `description[string]`: A description of this item  
+- `frequency[number]`: The frequency of the circuit. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `gasConsumption[number]`: Gas consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20).'  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `id[*]`: Unique identifier of the entity  
 - `location[*]`: GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  
 - `name[string]`: The name of this item  
@@ -72,6 +75,8 @@ version: 0.0.1
 - `seeAlso[*]`: list of uri pointing to additional resources about the item  
 - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  
 - `temperature[number]`: Temperature of the item  
+- `thermalEnergyExport[number]`: Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `thermalEnergyImport[number]`: Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `totalActivePower[number]`: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `totalApparentEnergyExport[number]`: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
 - `totalApparentEnergyImport[number]`: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
@@ -198,6 +203,12 @@ custom_data_model:
       type: number    
       x-ngsi:    
         type: Property    
+    contactStatus:    
+      description: The contact indication, true = broken (open), false = in place (closed)    
+      readOnly: yes    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
     current:    
       description: Electrical current. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
       properties:    
@@ -239,6 +250,21 @@ custom_data_model:
       description: A description of this item    
       type: string    
       x-ngsi:    
+        type: Property    
+    frequency:    
+      description: The frequency of the circuit. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Hertz    
+    gasConsumption:    
+      description: Gas consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20).'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
         type: Property    
     id:    
       anyOf:    
@@ -562,6 +588,22 @@ custom_data_model:
       type: number    
       x-ngsi:    
         type: Property    
+    thermalEnergyExport:    
+      description: Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilovolt-ampere-hour.    
+    thermalEnergyImport:    
+      description: Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilovolt-ampere-hour.    
     totalActivePower:    
       description: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
       type: number    
@@ -656,7 +698,7 @@ Here is an example of a custom_data_model in JSON-LD format as key-values. This 
   "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
   "type": "fortesie",  
   "@context": [  
-    "http://forteseie-ld-context/fortesie-context.jsonld"
+    "http://forteseie-ld-context/fortesie-context.jsonld"  
   ],  
   "phaseVoltage": 223.6,  
   "phaseToPhaseVoltage": [  
@@ -674,16 +716,21 @@ Here is an example of a custom_data_model in JSON-LD format as key-values. This 
   "apparentPower": 45.8,  
   "totalApparentEnergyImport": 34.2,  
   "totalApparentEnergyExport": 4.2,  
+  "frequency": 49.8,  
   "nominalWaterFlowHeating": 54.1,  
   "nominalSupplyWaterTemperatureHeating": 23.8,  
   "nominalReturnWaterTemperatureHeating": 10.3,  
+  "thermalEnergyImport": 12.3,  
+  "thermalEnergyExport": 1.3,  
+  "gasConsumption ": 1.3,  
   "temperature": 18.4,  
   "relativeHumidity": 39.0,  
   "pm25": 36.0,  
   "co2": 690.5,  
   "windSpeed": 2.5,  
   "windDirection": 231,  
-  "precipitation": 34  
+  "precipitation": 34,  
+  "contactStatus": 1  
 }  
 ```  
 </details>  
@@ -699,7 +746,7 @@ Here is an example of a custom_data_model in JSON-LD format as normalized. This 
   "id": "urn:ngsi-ld:FORTESIE:DEMO-1:device-id-001",  
   "type": "fortesie",  
   "@context": [  
-    "http://forteseie-ld-context/fortesie-context.jsonld"
+    "http://forteseie-ld-context/fortesie-context.jsonld"  
   ],  
   "phaseVoltage": {  
     "type": "Property",  
@@ -840,11 +887,5 @@ Here is an example of a custom_data_model in JSON-LD format as normalized. This 
 }  
 ```  
 </details><!-- /80-Examples -->
-  
-<!-- 90-FooterNotes -->
-  
-<!-- /90-FooterNotes -->
-  
-<!-- 95-Units -->
   
 
