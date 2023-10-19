@@ -20,14 +20,19 @@
   "apparentPower": 45.8,
   "totalApparentEnergyImport": 34.2,
   "totalApparentEnergyExport": 4.2,
+  "frequency": 49.8,
   "nominalWaterFlowHeating": 54.1,
   "nominalSupplyWaterTemperatureHeating": 23.8,
   "nominalReturnWaterTemperatureHeating": 10.3,
+  "thermalEnergyImport": 12.3,
+  "thermalEnergyExport": 1.3,
+  "gasConsumption ": 1.3,
   "temperature": 18.4,
   "relativeHumidity": 39.0,
   "pm25": 36.0,
   "co2": 690.5,
   "windSpeed": 2.5,
   "windDirection": 231,
-  "precipitation": 34
+  "precipitation": 34,
+  "contactStatus": 1
 }

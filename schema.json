@@ -194,6 +194,11 @@
                     "minimum": 0,
                     "description": "Property. Model:'https://schema.org/StructuredValue'. Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
                 },
+                "frequency": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. The frequency of the circuit. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'Hertz'"
+                },
                 "nominalWaterFlowHeating": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
                     "description": "Property. Nominal water flow (refers to nominal heating capacity). Usually measured in m3/s"
@@ -205,6 +210,21 @@
                 "nominalWaterFlowCooling": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
                     "description": "Property. Nominal water flow (refers to nominal cooling capacity). Usually measured in m3/s"
+                },
+                "thermalEnergyImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                },
+                "thermalEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                },
+                "gasConsumption": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Gas consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20).'"
                 },
                 "temperature": {
                     "type": "number",
@@ -241,9 +261,12 @@
                     "type": "number",
                     "minimum": 0,
                     "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+                },
+                "contactStatus": {
+                    "description": "Property. The contact indication, true = broken (open), false = in place (closed)",
+                    "readOnly": true,
+                    "type": "boolean"
                 }
-
-
             }
         }
     ],
