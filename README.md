@@ -17,7 +17,7 @@ Link to the [specification](./doc/spec.md)
 
 <!-- Link to the [example](./examples/example.json) (keyvalues) for NGSI v2 -->
 
-Link to the [example](./examples/example.jsonld) (keyvalues) for NGSI-LD
+<!-- Link to the [example](./examples/example.jsonld) (keyvalues) for NGSI-LD -->
 
 <!-- Link to the [example](./examples/example-normalized.json) (normalized) for NGSI-V2 -->
 

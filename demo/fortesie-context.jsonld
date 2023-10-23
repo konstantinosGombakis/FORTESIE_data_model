@@ -35,7 +35,7 @@
         "frequency": "https://smartdatamodels.org/dataModel.Energy/frequency",
         "gasConsumption": "https://raw.githubusercontent.com/konstantinosGombakis/FORTESIE_data_model/main/schema.json#/gasConsumption",
         "id": "@id",
-        "location": "ngsi-ld:location",
+        "location": "ngsild:location",
         "name": "https://smartdatamodels.org/name",
         "nominalSupplyWaterTemperatureHeating": "https://smartdatamodels.org/dataModel.S4BLDG/nominalSupplyWaterTemperatureHeating",
         "nominalWaterFlowCooling": "https://smartdatamodels.org/dataModel.S4BLDG/nominalWaterFlowCooling",
