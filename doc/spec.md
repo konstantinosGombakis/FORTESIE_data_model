@@ -62,6 +62,8 @@ version: 0.0.1
 	- `L2[number]`: Property. Value for phase 2 of the voltage    
 	- `L3[number]`: Property. Value for phase 3 of the voltage    
 - `pm25[number]`: Particulate matter 2.5 micrometers or less in diameter  
+- `volatileOrganicCompoundsTotal[number]`: Alkanes <C10, ketones <C6, aldehydes <C10, carboxylic acids <C5, aspirits<C7, Alkenes <C8, Aromatics  
+
 - `powerFactor[object]`: Power factor for each phase  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
 	- `L1[number]`: Property. Value for phase 1 of the power factor    
 	- `L2[number]`: Property. Value for phase 2 of the power factor    

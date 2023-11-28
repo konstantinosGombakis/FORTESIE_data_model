@@ -44,6 +44,7 @@
         "phaseToPhaseVoltage": "https://smartdatamodels.org/dataModel.Energy/phaseToPhaseVoltage",
         "phaseVoltage": "https://smartdatamodels.org/dataModel.Energy/phaseVoltage",
         "pm25": "https://smartdatamodels.org/dataModel.Environment/pm25",
+        "volatileOrganicCompoundsTotal": "https://smartdatamodels.org/dataModel.Environment/volatileOrganicCompoundsTotal",
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
         "postalCode": "https://smartdatamodels.org/postalCode",
         "powerFactor": "https://smartdatamodels.org/dataModel.Energy/powerFactor",

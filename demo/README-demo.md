@@ -390,6 +390,12 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "unitCode": "59",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
+  "volatileOrganicCompoundsTotal": {
+    "type": "Property",
+    "value": 690.5,
+    "unitCode": "59",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
   "windSpeed": {
     "type": "Property",
     "value": 2.5,
