@@ -80,8 +80,12 @@ version: 0.0.1
 - `thermalEnergyExport[number]`: Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `thermalEnergyImport[number]`: Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `totalActivePower[number]`: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `totalApparentEnergyExport[number]`: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
-- `totalApparentEnergyImport[number]`: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `totalActiveEnergyExport[number]`: Total active energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
+- `totalActiveEnergyImport[number]`: Total active energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `totalReactiveEnergyExport[number]`: Total reactive energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
+- `totalReactiveEnergyImport[number]`: Total reactive energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `totalApparentEnergyExport[number]`: Total energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
+- `totalApparentEnergyImport[number]`: Total energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `totalApparentPower[number]`: Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `totalReactivePower[number]`: Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `type[string]`: NGSI Entity type. It has to be fortesie  
@@ -613,8 +617,40 @@ custom_data_model:
         model: https://schema.org/Number    
         type: Property    
         units: Watt    
+    totalActiveEnergyExport:    
+      description: Total active energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/StructuredValue    
+        type: Property    
+        units: kilovolt-ampere-hour    
+    totalActiveEnergyImport:    
+      description: Total active energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilovolt-ampere-hour.    
+    totalReactiveEnergyExport:    
+      description: Total reactive energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/StructuredValue    
+        type: Property    
+        units: kilovolt-ampere-hour    
+    totalReactiveEnergyImport:    
+      description: Total reactive energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilovolt-ampere-hour.    
     totalApparentEnergyExport:    
-      description: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      description: Total energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -622,7 +658,7 @@ custom_data_model:
         type: Property    
         units: kilovolt-ampere-hour    
     totalApparentEnergyImport:    
-      description: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
+      description: Total energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -814,6 +850,30 @@ Here is an example of a custom_data_model in JSON-LD format as normalized. This 
     "unitCode": "P1",  
     "observedAt": "2023-09-15T16:04:49Z"  
   },  
+    "totalActiveEnergyImport": {
+    "type": "Property",
+    "value": 32.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "totalActiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+    "totalReactiveEnergyImport": {
+    "type": "Property",
+    "value": 6.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "totalReactiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
   "totalApparentEnergyImport": {  
     "type": "Property",  
     "value": 34.2,  

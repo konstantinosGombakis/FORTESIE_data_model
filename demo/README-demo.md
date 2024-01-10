@@ -127,6 +127,30 @@ curl -X GET 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:FORTESIE:DEMO
     "unitCode": "K1",
     "observedAt": "2023-09-15T16:04:49.000Z"
   },
+    "https://smartdatamodels.org/dataModel.Energy/totalActiveEnergyImport": {
+    "type": "Property",
+    "value": 32.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://smartdatamodels.org/dataModel.Energy/totalActiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+    "https://smartdatamodels.org/dataModel.Energy/totalReactiveEnergyImport": {
+    "type": "Property",
+    "value": 6.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "https://smartdatamodels.org/dataModel.Energy/totalReactiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
   "https://smartdatamodels.org/dataModel.Energy/totalApparentEnergyImport": {
     "type": "Property",
     "value": 34.2,

@@ -184,15 +184,35 @@
                         }
                     }
                 },
+                "totalActiveEnergyImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total active energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                },
+                "totalActiveEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total active energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "totalReactiveEnergyImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total reactive energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                },
+                "totalReactiveEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total reactive energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
                 "totalApparentEnergyImport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                    "description": "Property. Model:'https://schema.org/Number'. Total apparent energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
                 },
                 "totalApparentEnergyExport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total apparent energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
                 },
                 "frequency": {
                     "type": "number",

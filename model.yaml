@@ -547,9 +547,42 @@ custom_data_model:
         model: https://schema.org/Number
         type: Property
         units: Watt
+    totalActiveEnergyExport:
+      description: Total active energy exported. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+        units: kilovolt-ampere-hour
 
+    totalActiveEnergyImport:
+      description: Total active energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour.
+    totalReactiveEnergyExport:
+      description: Total reactive energy exported. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+        units: kilovolt-ampere-hour
+
+    totalReactiveEnergyImport:
+      description: Total reactive energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour.
     totalApparentEnergyExport:
-      description: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      description: Total energy exported . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       minimum: 0
       type: number
       x-ngsi:
@@ -558,7 +591,7 @@ custom_data_model:
         units: kilovolt-ampere-hour
 
     totalApparentEnergyImport:
-      description: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      description: Total energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       minimum: 0
       type: number
       x-ngsi:

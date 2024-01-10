@@ -68,6 +68,30 @@
     "unitCode": "P1",
     "observedAt": "2023-09-15T16:04:49Z"
   },
+  "totalActiveEnergyImport": {
+    "type": "Property",
+    "value": 32.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "totalActiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+    "totalReactiveEnergyImport": {
+    "type": "Property",
+    "value": 6.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
+  "totalReactiveEnergyExport": {
+    "type": "Property",
+    "value": 1.2,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49.000Z"
+  },
   "totalApparentEnergyImport": {
     "type": "Property",
     "value": 34.2,
