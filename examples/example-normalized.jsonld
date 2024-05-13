@@ -80,24 +80,54 @@
     "unitCode": "KWH",
     "observedAt": "2023-09-15T16:04:49Z"
   },
+  "frequency": {
+    "type": "Property",
+    "value": 658.2,
+    "unitCode": "HTZ",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
   "nominalWaterFlowHeating": {
     "type": "Property",
     "value": 54.1,
     "unitCode": "MQS",
     "observedAt": "2023-09-15T16:04:49Z"
   },
+  "thermalEnergyImport": {
+    "type": "Property",
+    "value": 619.8,
+    "unitCode": "3B",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
+"thermalEnergyExport": {
+    "type": "Property",
+    "value": 553.8,
+    "unitCode": "3B",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
   "nominalSupplyWaterTemperatureHeating": {
     "type": "Property",
     "value": 23.8,
     "unitCode": "CEL",
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "nominalReturnWaterTemperatureHeating": {
+  "nominalWaterFlowCooling": {
     "type": "Property",
+    "value": 936.1,
+    "unitCode": "MQS",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
+  "nominalReturnWaterTemeratureHeating": {
+    "type": "Propertyp",
     "value": 10.3,
     "unitCode": "CEL",
     "observedAt": "2023-09-15T16:04:49Z"
   },
+  "gasConsumption": {
+    "type": "Property",
+    "value": 727.0,
+    "unitCode": "3B",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
   "temperature": {
     "type": "Property",
     "value": 18.4,
@@ -138,6 +168,147 @@
     "type": "Property",
     "value": 34,
     "unitCode": "MMT",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "contactStatus": {
+    "type": "Property",
+    "value": true
+},
+"illuminance": {
+    "type": "Property",
+    "value": 194.9,
+    "unitCode": "KLX",
+    "observedAt": "2023-09-15T16:04:49Z"
+},
+  "heatingDegreeDays": {
+    "type": "Property",
+    "value": 676.9,
+    "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "coolingDegreeDays": {
+    "type": "Property",
+    "value": 904.6,
+    "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "referenceHeatingDegreeDays": {
+    "type": "Property",
+    "value": 340.5,
+    "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "referenceCoolingDegreeDays": {
+    "type": "Property",
+    "value": 359.5,
+    "unitCode": "CEL",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "referenceElectricalConsumption": {
+    "type": "Property",
+    "value": 282.1,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "referenceThermalConsumption": {
+    "type": "Property",
+    "value": 651.4,
+    "unitCode": "3B",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "variableTerm": {
+    "type": "Property",
+    "value": 974.6,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "constantTerm": {
+    "type": "Property",
+    "value": 887.1,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "excludedConsumption": {
+    "type": "Property",
+    "value": 896.8,
+    "unitCode": "KWH",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "excludedSavings": {
+    "type": "Property",
+    "value": 116.6,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "agreedSavings": {
+    "type": "Property",
+    "value": 407.5,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "thresholdSavings": {
+    "type": "Property",
+    "value": 886.6,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "escoBonusPercentage": {
+    "type": "Property",
+    "value": 477.8,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "consumerBonusPercentage": {
+    "type": "Property",
+    "value": 241.0,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "escoMalusPercentage": {
+    "type": "Property",
+    "value": 573.2,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "consumerMalusPercentage": {
+    "type": "Property",
+    "value": 245.9,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "fixedPrice": {
+    "type": "Property",
+    "value": 337.2,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "energyPrice": {
+    "type": "Property",
+    "value": 116.4,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "mobile_user_id": {
+    "type": "Property",
+    "value": "dfsg412",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "challenge_id": {
+    "type": "Property",
+    "value": "adfd2123123t0",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "challenge_status": {
+    "type": "Property",
+    "value": "FAILED"
+  },
+  "challenge_points_awarded": {
+    "type": "Property",
+    "value": 364.0,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendation_id": {
+    "type": "Property",
+    "value": 311.7,
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendation_message": {
+    "type": "Property",
+    "value": "Writer nor type throughout analysis. Every rest between personal bit.",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendation_type": {
+    "type": "Property",
+    "value": "WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)",
     "observedAt": "2023-09-15T16:04:49Z"
   }
 }

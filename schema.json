@@ -206,6 +206,10 @@
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
                     "description": "Property. Nominal supply water temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K)"
                 },
+                "nominalReturnWaterTemperatureHeating":{
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
+                    "description" : "Nominal return water temperature (refers to nominal heating capacity). Usually measured in degrees Kelvin (K)"
+                },
                 "nominalWaterFlowCooling": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/S4BLDG-schema.json#/definitions/Measurement",
                     "description": "Property. Nominal water flow (refers to nominal cooling capacity). Usually measured in m3/s"

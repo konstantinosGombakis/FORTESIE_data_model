@@ -21,7 +21,9 @@ Link to the [specification](./doc/spec.md)
 
 <!-- Link to the [example](./examples/example-normalized.json) (normalized) for NGSI-V2 -->
 
-Link to the [example](./examples/example-normalized.jsonld) (normalized) for NGSI-LD
+Link to the [example](./examples/example-normalized.jsonld) (normalized) for NGSI-LD.
+
+All measurement/entities that have a unit **MUST** include their unique [unitCode](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20/)
 
 ## Demo
 
