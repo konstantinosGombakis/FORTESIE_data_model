@@ -57,6 +57,15 @@ custom_data_model:
         model: https://schema.org/address
         type: Property
 
+    agreedSavings:
+      description: Percentage of savings agreed by the contract. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
+
     alternateName:
       description: An alternative name for this item
       type: string
@@ -91,6 +100,31 @@ custom_data_model:
         model: https://schema.org/Text
         type: Property
 
+    challenge_id:
+      description: ' A string representing the challenge for the current user '
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+
+    challenge_points_awarded:
+      description: The points the user won from the challenge (if applicable
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    challenge_status:
+      description: The status of the challenge WON, FAILED
+      enum:
+        - WON
+        - FAILED
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT
+        type: Property
+
     co2:
       description: Carbon Dioxide detected
       minimum: 0
@@ -98,11 +132,45 @@ custom_data_model:
       x-ngsi:
         type: Property
 
+    constantTerm:
+      description: 'Real consumption of energy in the period to be evaluated for the calculation of the EPC. '
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    consumerBonusPercentage:
+      description: Percentage of the bonus which is given to the Consumer. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
+
+    consumerMalusPercentage:
+      description: Percentage of the malus which is given to the Consumer. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
+
     contactStatus:
       description: The contact indication, true = broken (open), false = in place (closed)
       readOnly: yes
       type: boolean
       x-ngsi:
+        type: Property
+
+    coolingDegreeDays:
+      description: Cooling degree days are calculated based on the number of degrees that the average outdoor temperature rises above a specified baseline temperature over a given period of a day.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
         type: Property
 
     current:
@@ -152,6 +220,58 @@ custom_data_model:
       x-ngsi:
         type: Property
 
+    energyPrice:
+      description: Energy price for each month, needed for the calculation of the savings and billed price.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    escoBonusPercentage:
+      description: Percentage of the bonus which is given to the ESCO. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
+
+    escoMalusPercentage:
+      description: Percentage of the malus which is given to the ESCO. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
+
+    excludedConsumption:
+      description: Consumptions that are excluded from the EPC due to various reasons. For example sanitary water consumption is excluded from savings calculations in most EPCs because renovations doesn’t affect them. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour
+
+    excludedSavings:
+      description: Savings that are excluded from the EPC due to various reasons. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour
+
+    fixedPrice:
+      description: Fixed price of the contract charged to the consumer each month.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
     frequency:
       description: The frequency of the circuit. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
       minimum: 0
@@ -169,6 +289,14 @@ custom_data_model:
         model: https://schema.org/Number
         type: Property
 
+    heatingDegreeDays:
+      description: ''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number.Heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day
+        type: Property
+
     id:
       anyOf:
         - description: Property. Identifier format of any NGSI entity
@@ -182,6 +310,15 @@ custom_data_model:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
+
+    illuminance:
+      description: ''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: Measured illuminance LUX.
 
     location:
 
@@ -343,9 +480,22 @@ custom_data_model:
           title: GeoJSON MultiPolygon
           type: object
 
+    mobile_user_id:
+      description: 'The id of the user of the mobile app. It links to a specific building, dwelling (ie urn:ngsi-ld:fortesie:demo_1:building_ax8:dwelling_asx) '
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+
     name:
       description: The name of this item
       type: string
+      x-ngsi:
+        type: Property
+
+    nominalReturnWaterTemperatureHeating:
+      description: Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement
+      type: number
       x-ngsi:
         type: Property
 
@@ -457,13 +607,13 @@ custom_data_model:
         type: Property
 
     precipitation:
-      description: 'Amount of water rain registered. '
+      description: Amount of water rain registered
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: Liters per square meter
+        units: Liters per square meter.
 
     reactivePower:
       description: Fundamental frequency reactive power. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
@@ -482,6 +632,67 @@ custom_data_model:
         model: https://schema.org/StructuredValue
         type: Property
         units: volts-ampere-reactive
+
+    recommendation_id:
+      description: The unique id of the recommendation for reference
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    recommendation_message:
+      description: recommendation_message
+      minimum: 0
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT
+        type: Property
+
+    recommendation_type:
+      description: f available the recommendation type
+      enum:
+        - CHALLENGE (eg You won challenge X congratulations)
+        - RECOMMENDATION (eg. You could lower your temperature X degrees for the next few days to achieve...)
+        - WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+
+    referenceCoolingDegreeDays:
+      description: Reference heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day used for the definition of the contact ESCO and customer.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    referenceElectricalConsumption:
+      description: Reference electrical  energy consumption used for the calculation of the baseline consumption. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-hour
+
+    referenceHeatingDegreeDays:
+      description: ''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number.Reference heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day used for the definition of the contact ESCO and customer.
+        type: Property
+
+    referenceThermalConsumption:
+      description: The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number.Reference thermal energy consumption used for the calculation of the baseline consumption
+        type: Property
+        units: kilovolt-ampere-hour
 
     relativeHumidity:
       description: Relative Humidity of the air (a number between 0 and 1 representing the range of 0% to 100%)
@@ -523,7 +734,7 @@ custom_data_model:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: kilovolt-ampere-hour.
+        units: kilovolt-ampere-hour
 
     thermalEnergyImport:
       description: Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
@@ -532,7 +743,16 @@ custom_data_model:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: kilovolt-ampere-hour.
+        units: kilovolt-ampere-hour
+
+    thresholdSavings:
+      description: Percentage of savings that determines the interval in which the EPC bonus or malus is applied. For example a +-5% range, in which neither a bonus or malus is applied. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: '%'
 
     totalActivePower:
       description: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
@@ -558,7 +778,7 @@ custom_data_model:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: kilovolt-ampere-hour.
+        units: kilovolt-ampere-hour
 
     totalApparentPower:
       description: Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
@@ -583,6 +803,14 @@ custom_data_model:
         - fortesie
       type: string
       x-ngsi:
+        type: Property
+
+    variableTerm:
+      description: Variable term of the equation (varaibleTerm*X+constantTerm) for the calculation of the baseline consumption.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
         type: Property
 
     windDirection:
@@ -618,4 +846,4 @@ custom_data_model:
 
   x-model-tags: ''
 
-  x-version: 0.0.1
+  x-version: 0.1.0
