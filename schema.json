@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://raw.githubusercontent.com/konstantinosGombakis/fortesie_data_model/main/FORTESIES_data_model/schema.json",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
     "title": "Data model for H2020 FORTESIES project",
     "description": "Data model for H2020 FORTESIES project",
     "type": "object",
