@@ -21,7 +21,7 @@
                         "fortesie"
                     ],
                     "description": "Property. NGSI Entity type. It has to be fortesie"
-                }, 
+                },
                 "phaseVoltage": {
                     "type": "object",
                     "description": "Property. Model:'https://schema.org/StructuredValue'. The voltage between each phase and neutral conductor. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Volts'",
@@ -90,7 +90,6 @@
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'"
                 },
-
                 "totalReactivePower": {
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere-reactive'"
@@ -187,7 +186,7 @@
                 "totalApparentEnergyImport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
                 },
                 "totalApparentEnergyExport": {
                     "type": "number",
@@ -214,12 +213,12 @@
                 "thermalEnergyImport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
                 },
                 "thermalEnergyExport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour.'"
+                    "description": "Property. Model:'https://schema.org/Number'. Thermal energy exported i.e. generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
                 },
                 "gasConsumption": {
                     "type": "number",
@@ -251,21 +250,156 @@
                     "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
                     "minimum": 0,
                     "maximum": 360
-                  },
-                  "windSpeed": {
+                },
+                "windSpeed": {
                     "type": "number",
                     "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
                     "minimum": 0
-                  },
-                  "precipitation": {
+                },
+                "precipitation": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+                    "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'."
                 },
                 "contactStatus": {
                     "description": "Property. The contact indication, true = broken (open), false = in place (closed)",
                     "readOnly": true,
                     "type": "boolean"
+                },
+                "illuminance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Measured illuminance Units:'LUX'."
+                },
+                "heatingDegreeDays": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'.Heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day"
+                },
+                "coolingDegreeDays": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Cooling degree days are calculated based on the number of degrees that the average outdoor temperature rises above a specified baseline temperature over a given period of a day."
+                },
+                "referenceHeatingDegreeDays": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'.Reference heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day used for the definition of the contact ESCO and customer."
+                },
+                "referenceCoolingDegreeDays": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Reference heating degree days are calculated based on the number of degrees that the average outdoor temperature falls below a specified baseline temperature over a given period of a day used for the definition of the contact ESCO and customer."
+                },
+                "referenceElectricalConsumption": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Reference electrical  energy consumption used for the calculation of the baseline consumption. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "referenceThermalConsumption": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'.Reference thermal energy consumption used for the calculation of the baseline consumption. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "variableTerm": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Variable term of the equation (varaibleTerm*X+constantTerm) for the calculation of the baseline consumption."
+                },
+                "constantTerm": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Real consumption of energy in the period to be evaluated for the calculation of the EPC. "
+                },
+                "excludedConsumption": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Consumptions that are excluded from the EPC due to various reasons. For example sanitary water consumption is excluded from savings calculations in most EPCs because renovations doesn’t affect them. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "excludedSavings": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Savings that are excluded from the EPC due to various reasons. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
+                },
+                "agreedSavings": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of savings agreed by the contract. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'"
+                },
+                "thresholdSavings": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of savings that determines the interval in which the EPC bonus or malus is applied. For example a +-5% range, in which neither a bonus or malus is applied. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'" 
+                },
+                "escoBonusPercentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of the bonus which is given to the ESCO. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'" 
+                },
+                "consumerBonusPercentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of the bonus which is given to the Consumer. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'" 
+                },
+                "escoMalusPercentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of the malus which is given to the ESCO. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'" 
+                },
+                "consumerMalusPercentage": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Percentage of the malus which is given to the Consumer. This percentage can be for the whole contract or different for each year. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'%'" 
+                },
+                "fixedPrice": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Fixed price of the contract charged to the consumer each month." 
+                },
+                "energyPrice": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Energy price for each month, needed for the calculation of the savings and billed price." 
+                },
+                "mobile_user_id": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. The id of the user of the mobile app. It links to a specific building, dwelling (ie urn:ngsi-ld:fortesie:demo_1:building_ax8:dwelling_asx) " 
+                },
+                "challenge_id": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'.  A string representing the challenge for the current user " 
+                },
+                "challenge_status": {
+                    "type": "string",
+                    "enum": [
+                        "WON",
+                        "FAILED"
+                    ],
+                    "description": "Property. Model:'https://schema.org/TEXT'. The status of the challenge WON, FAILED" 
+                },
+                "challenge_points_awarded": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. The points the user won from the challenge (if applicable" 
+                },
+                "recommendation_id": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. The unique id of the recommendation for reference" 
+                },
+                "recommendation_message": {
+                    "type": "string",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/TEXT'. recommendation_message" 
+                },
+                "recommendation_type": {
+                    "type": "string",
+                    "enum": [
+                        "CHALLENGE (eg You won challenge X congratulations)",
+                        "RECOMMENDATION (eg. You could lower your temperature X degrees for the next few days to achieve...)",
+                        "WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)"
+                    ],
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. f available the recommendation type" 
                 }
             }
         }
