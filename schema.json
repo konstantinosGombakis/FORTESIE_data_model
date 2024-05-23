@@ -86,18 +86,31 @@
                         }
                     }
                 },
-                "totalActivePower": {
+                "totalActivePowerExport": {
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'"
                 },
-                "totalReactivePower": {
+                "totalReactivePowerExport": {
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere-reactive'"
                 },
-                "totalApparentPower": {
+                "totalApparentPowerExport": {
                     "type": "number",
                     "minimum": 0,
                     "description": "Property. Model:'https://schema.org/Number'. Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere'"
+                },
+                "totalActivePowerImport": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Total Active Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'Watt'"
+                },
+                "totalReactivePowerImport": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Total Reactive Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere-reactive'"
+                },
+                "totalApparentPowerImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total Apparent Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'volt-ampere'"
                 },
                 "powerFactor": {
                     "type": "object",
@@ -183,16 +196,37 @@
                         }
                     }
                 },
-                "totalApparentEnergyImport": {
+                "totalActiveEnergyImport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
-                },
-                "totalApparentEnergyExport": {
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilowatt hour'"
+                  },
+                  "totalReactiveEnergyImport": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20). Units:'kilovolt-ampere-hour'"
-                },
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to fundamental frequency reactive power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-reactive-hour.'"
+                  },
+                  "totalApparentEnergyImport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-hour.'"
+                  },
+                  "totalActiveEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. Total energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilowatt hour'"
+                  },
+                  "totalReactiveEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total fundamental frequency reactive energy exported. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-reactive-hour'"
+                  },
+                  "totalApparentEnergyExport": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Units:'kilovolt-ampere-hour'"
+                  },
+
                 "frequency": {
                     "type": "number",
                     "minimum": 0,
@@ -248,6 +282,11 @@
                     "type": "number",
                     "minimum": 0,
                     "description": "Property. Particulate matter 2.5 micrometers or less in diameter"
+                },
+                "volatileOrganicCompoundsTotal": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Alkanes <C10, ketones <C6, aldehydes <C10, carboxylic acids <C5, aspirits<C7, Alkenes <C8, Aromatics"
                 },
                 "windDirection": {
                     "type": "number",
