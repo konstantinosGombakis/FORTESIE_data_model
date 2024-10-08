@@ -404,15 +404,53 @@
                     "minimum": 0,
                     "description": "Property. Model:'https://schema.org/Number'. Energy price for each month, needed for the calculation of the savings and billed price." 
                 },
-                "mobile_user_id": {
-                    "type": "string",
-                    "description": "Property. Model:'https://schema.org/StructuredValue'. The id of the user of the mobile app. It links to a specific building, dwelling (ie urn:ngsi-ld:fortesie:demo_1:building_ax8:dwelling_asx) " 
+                "verifiedEnergySavings":{
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. output of the M&V components after the correction with the dependent variables (ie temperature)"
                 },
-                "challenge_id": {
-                    "type": "string",
-                    "description": "Property. Model:'https://schema.org/StructuredValue'.  A string representing the challenge for the current user " 
+                "greenEuroBalance":{
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'."
                 },
-                "challenge_status": {
+                "userEmail": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. The email of the user of the mobile & green euro apps." 
+                },
+                "recommendationEngineMessageId": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. The unique id of the recommendation for reference." 
+                },
+                "recommendationEngineMessageType": {
+                    "type": "string",
+                    "enum": [
+                        "MONTHLY_CHALLENGE",
+                        "QUIZ",
+                        "ENERGY_SAVING_RECOMMENDATION",
+                        "RENOVATION_RECOMMENDATION",
+                        "WARNING"
+                    ],
+                    "description": "Property. Model:'https://schema.org/StructuredValue'.Recommendation type" 
+                },
+                "recommendationEngineMessageText": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/TEXT'. recommendation_message" 
+                },
+                "recommendationEngineMessageResponse": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/TEXT'. Question or other response text that require user input." 
+                },
+                "recommendationEngineMessageCorrectResponse": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/TEXT'. Correct answer for a recommendationEngineMessageResponse entity." 
+                },
+                "recommendationEngineMessageTimeToShow": {
+                    "type": "date",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. The time in ISO 8601 UTC mobile app will show the recommendation_engine_message_text entity " 
+                },
+                "recommendationEngineChallengeStatus": {
                     "type": "string",
                     "enum": [
                         "WON",
@@ -420,29 +458,25 @@
                     ],
                     "description": "Property. Model:'https://schema.org/TEXT'. The status of the challenge WON, FAILED" 
                 },
-                "challenge_points_awarded": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. The points the user won from the challenge (if applicable" 
-                },
-                "recommendation_id": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. The unique id of the recommendation for reference" 
-                },
-                "recommendation_message": {
-                    "type": "string",
-                    "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/TEXT'. recommendation_message" 
-                },
-                "recommendation_type": {
+                "recommendationEngineMessagePeriod": {
                     "type": "string",
                     "enum": [
-                        "CHALLENGE (eg You won challenge X congratulations)",
-                        "RECOMMENDATION (eg. You could lower your temperature X degrees for the next few days to achieve...)",
-                        "WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)"
+                        "DAY",
+                        "MONTH",
+                        "WEEK",
+                        "YEAR",
+                        "ALL"
                     ],
-                    "description": "Property. Model:'https://schema.org/StructuredValue'. f available the recommendation type" 
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Period of time the challenge is covering (note. same challenge cannot be realised twice within the same period)." 
+                },
+                "recommendationEngineMessageAppartmentId": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/TEXT'.Apartment ID for the specific apartment. Check Google sheet fortesie-demo-endpoint." 
+                },
+                "challengeRewardValue":{
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Model:'https://schema.org/Number'. The green euros the user won from the challenge (if applicable)."
                 }
             }
         }
