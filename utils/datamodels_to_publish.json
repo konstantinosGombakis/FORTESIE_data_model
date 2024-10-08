@@ -1,8 +1,8 @@
 {
     "dataModels": [
-        "leather"
+        "fortesie_data_model"
     ],
-    "subject": "circuloos_data_model",
+    "subject": "fortesie_data_model",
     "filterDataModels": true,
     "languages": [
         "EN-US"

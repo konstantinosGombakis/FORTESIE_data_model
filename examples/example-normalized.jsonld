@@ -85,7 +85,7 @@
     "value": 658.2,
     "unitCode": "HTZ",
     "observedAt": "2023-09-15T16:04:49Z"
-},
+  },
   "nominalWaterFlowHeating": {
     "type": "Property",
     "value": 54.1,
@@ -97,13 +97,13 @@
     "value": 619.8,
     "unitCode": "3B",
     "observedAt": "2023-09-15T16:04:49Z"
-},
-"thermalEnergyExport": {
+  },
+  "thermalEnergyExport": {
     "type": "Property",
     "value": 553.8,
     "unitCode": "3B",
     "observedAt": "2023-09-15T16:04:49Z"
-},
+  },
   "nominalSupplyWaterTemperatureHeating": {
     "type": "Property",
     "value": 23.8,
@@ -115,7 +115,7 @@
     "value": 936.1,
     "unitCode": "MQS",
     "observedAt": "2023-09-15T16:04:49Z"
-},
+  },
   "nominalReturnWaterTemeratureHeating": {
     "type": "Propertyp",
     "value": 10.3,
@@ -127,7 +127,7 @@
     "value": 727.0,
     "unitCode": "3B",
     "observedAt": "2023-09-15T16:04:49Z"
-},
+  },
   "temperature": {
     "type": "Property",
     "value": 18.4,
@@ -173,13 +173,13 @@
   "contactStatus": {
     "type": "Property",
     "value": true
-},
-"illuminance": {
+  },
+  "illuminance": {
     "type": "Property",
     "value": 194.9,
     "unitCode": "KLX",
     "observedAt": "2023-09-15T16:04:49Z"
-},
+  },
   "heatingDegreeDays": {
     "type": "Property",
     "value": 676.9,
@@ -277,38 +277,75 @@
     "value": 116.4,
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "mobile_user_id": {
+  "verifiedEnergySavings": {
     "type": "Property",
-    "value": "dfsg412",
+    "value": 34.6,
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "challenge_id": {
+  "greenEuroBalance": {
+    "type": "Property",
+    "value": 343.6,
+    "observedAt": "2023-09-15T16:04:49Z",
+    "unitCode": "€G"
+  },
+  "userEmail": {
+    "type": "Property",
+    "value": "fortesie@europeandynamics.eu",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineMessageId": {
     "type": "Property",
     "value": "adfd2123123t0",
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "challenge_status": {
+  "recommendationEngineMessageType": {
     "type": "Property",
-    "value": "FAILED"
-  },
-  "challenge_points_awarded": {
-    "type": "Property",
-    "value": 364.0,
+    "value": "WARNING",
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "recommendation_id": {
-    "type": "Property",
-    "value": 311.7,
-    "observedAt": "2023-09-15T16:04:49Z"
-  },
-  "recommendation_message": {
+  "recommendationEngineMessageText": {
     "type": "Property",
     "value": "Writer nor type throughout analysis. Every rest between personal bit.",
     "observedAt": "2023-09-15T16:04:49Z"
   },
-  "recommendation_type": {
+  "recommendationEngineMessageResponse": {
     "type": "Property",
-    "value": "WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)",
+    "value": {
+      "1": "To ensure proper functioning of electronic devices",
+      "2": "To prevent discomfort due to extreme temperatures",
+      "3": "To adjust indoor activities accordingly for comfort and health"
+    },
     "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineMessageCorrectResponse": {
+    "type": "Property",
+    "value": "3",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineMessageTimeToShow": {
+    "type": "Property",
+    "value": "2023-09-15T16:04:49Z",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineChallengeStatus": {
+    "type": "Property",
+    "value": "WON",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineMessagePeriod": {
+    "type": "Property",
+    "value": "MONTH",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "recommendationEngineMessageAppartmentId": {
+    "type": "Property",
+    "value": "urn:ngsi-ld:fortesie:demo-4:building_286:room_bn2",
+    "observedAt": "2023-09-15T16:04:49Z"
+  },
+  "challengeRewardValue": {
+    "type": "Property",
+    "value": 4,
+    "observedAt": "2023-09-15T16:04:49Z",
+    "unitCode": "€G"
   }
 }
