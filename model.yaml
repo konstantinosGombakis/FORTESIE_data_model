@@ -1,4 +1,4 @@
-custom_data_model:
+fortesie_data_model:
 
   description: Data model for H2020 FORTESIES project
 
@@ -100,29 +100,12 @@ custom_data_model:
         model: https://schema.org/Text
         type: Property
 
-    challenge_id:
-      description: ' A string representing the challenge for the current user '
-      type: string
-      x-ngsi:
-        model: https://schema.org/StructuredValue
-        type: Property
-
-    challenge_points_awarded:
-      description: The points the user won from the challenge (if applicable
+    challengeRewardValue:
+      description: The green euros the user won from the challenge (if applicable).
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
-        type: Property
-
-    challenge_status:
-      description: The status of the challenge WON, FAILED
-      enum:
-        - WON
-        - FAILED
-      type: string
-      x-ngsi:
-        model: https://schema.org/TEXT
         type: Property
 
     co2:
@@ -289,6 +272,14 @@ custom_data_model:
         model: https://schema.org/Number
         type: Property
 
+    greenEuroBalance:
+      description: ''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number.
+        type: Property
+
     heatingDegreeDays:
       description: ''
       minimum: 0
@@ -309,7 +300,7 @@ custom_data_model:
           type: string
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
 
     illuminance:
       description: ''
@@ -480,13 +471,6 @@ custom_data_model:
           title: GeoJSON MultiPolygon
           type: object
 
-    mobile_user_id:
-      description: 'The id of the user of the mobile app. It links to a specific building, dwelling (ie urn:ngsi-ld:fortesie:demo_1:building_ax8:dwelling_asx) '
-      type: string
-      x-ngsi:
-        model: https://schema.org/StructuredValue
-        type: Property
-
     name:
       description: The name of this item
       type: string
@@ -529,7 +513,7 @@ custom_data_model:
           - description: Property. Identifier format of any NGSI entity
             format: uri
             type: string
-        description: Property. Unique identifier of the entity
+        description: Relationship. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -633,31 +617,83 @@ custom_data_model:
         type: Property
         units: volts-ampere-reactive
 
-    recommendation_id:
-      description: The unique id of the recommendation for reference
-      minimum: 0
-      type: number
-      x-ngsi:
-        model: https://schema.org/Number
-        type: Property
-
-    recommendation_message:
-      description: recommendation_message
-      minimum: 0
+    recommendationEngineChallengeStatus:
+      description: The status of the challenge WON, FAILED
+      enum:
+        - WON
+        - FAILED
       type: string
       x-ngsi:
         model: https://schema.org/TEXT
         type: Property
 
-    recommendation_type:
-      description: f available the recommendation type
-      enum:
-        - CHALLENGE (eg You won challenge X congratulations)
-        - RECOMMENDATION (eg. You could lower your temperature X degrees for the next few days to achieve...)
-        - WARNING (eg.Not enough measurements available for the past few days. Please check your gateway connection)
+    recommendationEngineMessageAppartmentId:
+      description: Check Google sheet fortesie-demo-endpoint.
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT.Apartment ID for the specific apartment
+        type: Property
+
+    recommendationEngineMessageCorrectResponse:
+      description: Correct answer for a recommendationEngineMessageResponse entity.
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT
+        type: Property
+
+    recommendationEngineMessageId:
+      description: The unique id of the recommendation for reference.
       type: string
       x-ngsi:
         model: https://schema.org/StructuredValue
+        type: Property
+
+    recommendationEngineMessagePeriod:
+      description: Period of time the challenge is covering (note. same challenge cannot be realised twice within the same period).
+      enum:
+        - DAY
+        - MONTH
+        - WEEK
+        - YEAR
+        - ALL
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+
+    recommendationEngineMessageResponse:
+      description: Question or other response text that require user input.
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT
+        type: Property
+
+    recommendationEngineMessageText:
+      description: recommendation_message
+      type: string
+      x-ngsi:
+        model: https://schema.org/TEXT
+        type: Property
+
+    recommendationEngineMessageTimeToShow:
+      description: 'The time in ISO 8601 UTC mobile app will show the recommendation_engine_message_text entity '
+      minimum: 0
+      type: date
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    recommendationEngineMessageType:
+      description: ''
+      enum:
+        - MONTHLY_CHALLENGE
+        - QUIZ
+        - ENERGY_SAVING_RECOMMENDATION
+        - RENOVATION_RECOMMENDATION
+        - WARNING
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue.Recommendation type
         type: Property
 
     referenceCoolingDegreeDays:
@@ -754,7 +790,25 @@ custom_data_model:
         type: Property
         units: '%'
 
-    totalActivePower:
+    totalActiveEnergyExport:
+      description: Total energy imported i.e. consumed . The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilowatt hour
+
+    totalActiveEnergyImport:
+      description: Total energy imported i.e. consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilowatt hour
+
+    totalActivePowerExport:
       description: Total Active Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       type: number
       x-ngsi:
@@ -762,8 +816,16 @@ custom_data_model:
         type: Property
         units: Watt
 
+    totalActivePowerImport:
+      description: Total Active Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: Watt
+
     totalApparentEnergyExport:
-      description: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      description: Total energy exported (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
       minimum: 0
       type: number
       x-ngsi:
@@ -772,15 +834,15 @@ custom_data_model:
         units: kilovolt-ampere-hour
 
     totalApparentEnergyImport:
-      description: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      description: Total energy imported i.e. consumed (with regards to apparent power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: kilovolt-ampere-hour
+        units: kilovolt-ampere-hour.
 
-    totalApparentPower:
+    totalApparentPowerExport:
       description: Total Apparent Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       minimum: 0
       type: number
@@ -789,8 +851,43 @@ custom_data_model:
         type: Property
         units: volt-ampere
 
-    totalReactivePower:
+    totalApparentPowerImport:
+      description: Total Apparent Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: volt-ampere
+
+    totalReactiveEnergyExport:
+      description: Total fundamental frequency reactive energy exported. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+        units: kilovolt-ampere-reactive-hour
+
+    totalReactiveEnergyImport:
+      description: Total energy imported i.e. consumed (with regards to fundamental frequency reactive power). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilovolt-ampere-reactive-hour.
+
+    totalReactivePowerExport:
       description: Total Reactive Power consumed. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: volt-ampere-reactive
+
+    totalReactivePowerImport:
+      description: Total Reactive Power generated. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -805,12 +902,34 @@ custom_data_model:
       x-ngsi:
         type: Property
 
+    userEmail:
+      description: The email of the user of the mobile & green euro apps.
+      type: string
+      x-ngsi:
+        model: https://schema.org/StructuredValue
+        type: Property
+
     variableTerm:
       description: Variable term of the equation (varaibleTerm*X+constantTerm) for the calculation of the baseline consumption.
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
+
+    verifiedEnergySavings:
+      description: output of the M&V components after the correction with the dependent variables (ie temperature)
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+
+    volatileOrganicCompoundsTotal:
+      description: Alkanes <C10, ketones <C6, aldehydes <C10, carboxylic acids <C5, aspirits<C7, Alkenes <C8, Aromatics
+      minimum: 0
+      type: number
+      x-ngsi:
         type: Property
 
     windDirection:
@@ -840,7 +959,7 @@ custom_data_model:
 
   x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program
 
-  x-license-url: https://github.com/smart-data-models/fortesie_data_model/blob/master/custom_data_model/LICENSE.md
+  x-license-url: https://github.com/smart-data-models/fortesie_data_model/blob/master/fortesie_data_model/LICENSE.md
 
   x-model-schema: https://raw.githubusercontent.com/konstantinosGombakis/fortesie_data_model/main/FORTESIES_data_model/schema.json
 
