@@ -139,7 +139,6 @@ version: 0.1.0
 - `userEmail[string]`: The email of the user of the mobile & green euro apps.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)
 - `variableTerm[number]`: Variable term of the equation (varaibleTerm*X+constantTerm) for the calculation of the baseline consumption.  . Model: [https://schema.org/Number](https://schema.org/Number)
 - `verifiedEnergySavings[number]`: output of the M&V components after the correction with the dependent variables (ie temperature)  . Model: [https://schema.org/Number](https://schema.org/Number)
-- `volatileOrganicCompoundsTotal[number]`: Alkanes <C10, ketones <C6, aldehydes <C10, carboxylic acids <C5, aspirits<C7, Alkenes <C8, Aromatics  
 - `windDirection[number]`: Direction of the wind bet  . Model: [http://schema.org/Number](http://schema.org/Number)
 - `windSpeed[number]`: Intensity of the wind  . Model: [http//schema.org/Number](http//schema.org/Number)
 <!-- /30-PropertiesList -->
