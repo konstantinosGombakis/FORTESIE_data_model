@@ -15,9 +15,9 @@ Entity: fortesie_data_model
 <!-- 20-Description -->
   
 
-Global description: **Data model for H2020 FORTESIES project**  
+Global description: **Data model for Horizon Europe FORTESIES project**  
 
-version: 0.1.0  
+version: 2.0.0  
 <!-- /20-Description -->
   
 <!-- 30-PropertiesList -->
@@ -169,7 +169,7 @@ Sorted alphabetically (click for details)
 
 ```yaml  
 fortesie_data_model:    
-  description: Data model for H2020 FORTESIES project    
+  description: Data model for Horizon Europe FORTESIES project    
   properties:    
     activePower:    
       description: Active power consumed per phase. The unit code (text) is given using the [UN/CEFACT Common Codes](https://docs.peppol.eu/poacc/billing/3.0/codelist/UNECERec20)    
@@ -1035,7 +1035,7 @@ fortesie_data_model:
   x-license-url: https://github.com/smart-data-models/fortesie_data_model/blob/master/fortesie_data_model/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/konstantinosGombakis/fortesie_data_model/main/FORTESIES_data_model/schema.json    
   x-model-tags: ''    
-  x-version: 0.1.0    
+  x-version: 2.0.0    
 ```  
 </details>    
 <!-- /60-ModelYaml -->

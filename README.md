@@ -1,6 +1,6 @@
 [![FORTESIE](./LOGO.png "Logo")](http://fortesie.eu/)
-# H2020 FORTESIE
-Version: 2
+# Horizon Europe FORTESIE
+Version: 2.0.0
 
 ## Description 
 

@@ -1,6 +1,6 @@
 fortesie_data_model:
 
-  description: Data model for H2020 FORTESIES project
+  description: Data model for Horizon Europe FORTESIES project
 
   properties:
 
@@ -963,4 +963,4 @@ fortesie_data_model:
 
   x-model-tags: ''
 
-  x-version: 0.1.0
+  x-version: 2.0.0
